@@ -10,12 +10,12 @@ MIDI_ENABLE = no            # MIDI controls
 AUDIO_ENABLE = no           # Audio output on port C6
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
-RGBLIGHT_ENABLE = es        # Enable WS2812 RGB underlight.
+RGBLIGHT_ENABLE = yes        # Enable WS2812 RGB underlight.
 RGB_MATRIX_ENABLE = no
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_ENABLE     = yes
 LTO_ENABLE      = yes
-TAP_DANCE_ENABLE = no
+TAP_DANCE_ENABLE = yes
 TERMINAL_ENABLE = no
 
-#SRC += ./oled.c
+SRC += ./oled.c
