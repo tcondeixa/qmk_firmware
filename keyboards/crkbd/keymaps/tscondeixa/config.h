@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_FONT_WIDTH 6
 #define OLED_FONT_HEIGHT 10
 
-//#define QUICK_TAP_TERM 0
+#define QUICK_TAP_TERM 100
 #define TAPPING_TERM 200
 
 #ifdef RGBLIGHT_ENABLE
@@ -45,6 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_EFFECT_RGB_TEST
     #define RGBLIGHT_EFFECT_ALTERNATING
     #define RGBLIGHT_EFFECT_TWINKLE
+    #define RGBLIGHT_SLEEP
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17

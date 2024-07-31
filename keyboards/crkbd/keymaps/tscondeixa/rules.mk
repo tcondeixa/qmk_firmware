@@ -15,7 +15,8 @@ RGB_MATRIX_ENABLE = no
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_ENABLE     = yes
 LTO_ENABLE      = yes
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no
 TERMINAL_ENABLE = no
+WPM_ENABLE = yes
 
 SRC += ./oled.c

@@ -1,7 +1,9 @@
 #include QMK_KEYBOARD_H
 #include "oled.h"
+#include <stdio.h>
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    wait_ms(1000);
     if (!is_keyboard_master()) {
         return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
     }
@@ -9,8 +11,6 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 }
 
 void oled_render_layer_state(void) {
-
-    oled_write_P(PSTR("Tiago Condeixa\n"), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
         case 0:
@@ -28,6 +28,10 @@ void oled_render_layer_state(void) {
         default:
             oled_write_ln_P(PSTR("Undefined"), false);
     }
+
+    char wpm_str[10];
+    sprintf(wpm_str, "WPM: %03d", get_current_wpm());
+    oled_write(wpm_str, false);
 }
 
 void render_bootmagic_status(bool status) {
