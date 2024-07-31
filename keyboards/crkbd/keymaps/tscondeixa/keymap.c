@@ -34,8 +34,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_VOLD KC_KB_VOLUME_DOWN
 #define KC_VOLU KC_KB_VOLUME_UP
 #define M2_BSPC LT(2,KC_BSPC)
+#define M3_BSPC LT(3,KC_BSPC)
 #define M1_TAB LT(1,KC_TAB)
-// #define ESC_CAP TD(TD_ESC_CAPS)
+#define M3_TAB LT(3,KC_TAB)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
@@ -59,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,  RGUI_T(KC_ESC),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  LSFT_T(KC_SPC),     RCTL_T(KC_ENT),   MO(3), ROPT_T(KC_ESC)
+                                          KC_LGUI, _______,  LSFT_T(KC_SPC),     RCTL_T(KC_ENT),   M3_BSPC, ROPT_T(KC_ESC)
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -71,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, KC_DQUO, KC_TILD,                      KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, KC_BSLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(3),   LSFT_T(KC_SPC),     RCTL_T(KC_ENT), _______, ROPT_T(KC_ESC)
+                                          KC_LGUI,   M3_TAB,   LSFT_T(KC_SPC),     RCTL_T(KC_ENT), _______, ROPT_T(KC_ESC)
                                       //`--------------------------'  `--------------------------'
   ),
 
