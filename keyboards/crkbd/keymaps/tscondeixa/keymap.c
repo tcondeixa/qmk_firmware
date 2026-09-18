@@ -30,9 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // // Other declarations would go here, separated by commas, if you have them
 // };
 
-#define KC_MUTE KC_KB_MUTE
-#define KC_VOLD KC_KB_VOLUME_DOWN
-#define KC_VOLU KC_KB_VOLUME_UP
+// #define KC_MUTE KC_KB_MUTE
+// #define KC_VOLD KC_KB_VOLUME_DOWN
+// #define KC_VOLU KC_KB_VOLUME_UP
 #define M2_BSPC LT(2,KC_BSPC)
 #define M3_BSPC LT(3,KC_BSPC)
 #define M1_TAB LT(1,KC_TAB)
@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       QK_BOOT, KC_BRMD, KC_BRMU, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, UG_TOGG, UG_HUEU, UG_SATU, UG_VALU, XXXXXXX,                      XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, UG_NEXT, UG_HUED, UG_SATD, UG_VALD, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  LSFT_T(KC_SPC),     RCTL_T(KC_ENT), _______, ROPT_T(KC_ESC)
                                       //`--------------------------'  `--------------------------'
